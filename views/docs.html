@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhayScript - Documentation</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/docs.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSIxMiIgZmlsbD0iIzFFMjkzQiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIiBkeT0iLjM1ZW0iIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGQUNDMTUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkpTPC90ZXh0Pjwvc3ZnPg==" alt="JhayScript Logo" width="48" height="48">
+                <span>JhayScript</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#getting-started" class="active">Getting Started</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#control-flow">Control Flow</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#advanced">Advanced</a></li>
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#download" class="nav-btn nav-btn-primary">Download</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="docs-container">
+        <aside class="docs-sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Language Basics</h3>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#variables">Variables & Types</a></li>
+                    <li><a href="#operators">Operators</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Control Structures</h3>
+                <ul>
+                    <li><a href="#conditionals">Conditionals</a></li>
+                    <li><a href="#loops">Loops</a></li>
+                    <li><a href="#error-handling">Error Handling</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Functions</h3>
+                <ul>
+                    <li><a href="#function-basics">Function Basics</a></li>
+                    <li><a href="#parameters">Parameters & Returns</a></li>
+                    <li><a href="#higher-order">Higher-Order Functions</a></li>
+                    <li><a href="#lambdas">Lambdas</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Collections</h3>
+                <ul>
+                    <li><a href="#arrays">Arrays</a></li>
+                    <li><a href="#maps">Maps</a></li>
+                    <li><a href="#iterators">Iterators</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Advanced</h3>
+                <ul>
+                    <li><a href="#classes">Classes & OOP</a></li>
+                    <li><a href="#async">Async/Await</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#builtins">Built-in Functions</a></li>
+                </ul>
+            </div>
+        </aside>
+        
+        <div class="docs-content">
+            <section id="getting-started" class="docs-section">
+                <h2>Getting Started with JhayScript</h2>
+                <p>JhayScript is a modern programming language that combines the simplicity of BASIC with powerful features from contemporary languages. This guide will walk you through everything from basic syntax to advanced concepts.</p>
+                
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="comment">// Your first JhayScript program</span></div>
+                        <div><span class="keyword">function</span> <span class="function">main</span>() {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Hello, World!"</span>)</div>
+                        <div>}</div>
+                    </div>
+                </div>
+                
+                <h3>Installation</h3>
+                <p>To get started with JhayScript, download the appropriate package for your operating system:</p>
+                
+                <div class="installation-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="windows">Windows</button>
+                        <button class="tab-btn" data-tab="macos">macOS</button>
+                        <button class="tab-btn" data-tab="linux">Linux</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="windows">
+                        <div class="code-example">
+                            <div class="code-content">
+                                <div><span class="comment"># Using PowerShell</span></div>
+                                <div>winget install JhayScript.JhayScript</div>
+                                <div><span class="comment"># Verify installation</span></div>
+                                <div>jhay --version</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="macos">
+                        <div class="code-example">
+                            <div class="code-content">
+                                <div><span class="comment"># Using Homebrew</span></div>
+                                <div>brew install jhayscript</div>
+                                <div><span class="comment"># Verify installation</span></div>
+                                <div>jhay --version</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="linux">
+                        <div class="code-example">
+                            <div class="code-content">
+                                <div><span class="comment"># Debian/Ubuntu</span></div>
+                                <div>sudo apt-get install jhayscript</div>
+                                <div><span class="comment"># Verify installation</span></div>
+                                <div>jhay --version</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="variables" class="docs-section">
+                <h2>Variables & Data Types</h2>
+                <p>JhayScript is strongly typed but supports type inference. Variables are declared with the <code>initiate</code> keyword.</p>
+                
+                <h3>Basic Types</h3>
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">variables.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="comment">// Primitive types</span></div>
+                        <div><span class="keyword">initiate</span> name = <span class="string">"Samuel"</span> <span class="comment">// string</span></div>
+                        <div><span class="keyword">initiate</span> age = <span class="number">21</span> <span class="comment">// integer</span></div>
+                        <div><span class="keyword">initiate</span> height = <span class="number">1.75</span> <span class="comment">// float</span></div>
+                        <div><span class="keyword">initiate</span> isDeveloper = <span class="keyword">true</span> <span class="comment">// boolean</span></div>
+                        <br>
+                        <div><span class="comment">// Explicit type declaration</span></div>
+                        <div><span class="keyword">initiate</span> counter: <span class="keyword">int</span> = <span class="number">0</span></div>
+                    </div>
+                </div>
+                
+                <h3>Constants</h3>
+                <p>Use <code>const</code> for values that shouldn't change:</p>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="keyword">const</span> PI = <span class="number">3.14159</span></div>
+                        <div><span class="keyword">const</span> MAX_USERS = <span class="number">100</span></div>
+                    </div>
+                </div>
+                
+                <h3>Type Conversion</h3>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="keyword">initiate</span> numStr = <span class="string">"42"</span></div>
+                        <div><span class="keyword">initiate</span> num = <span class="function">toInt</span>(numStr) <span class="comment">// Convert to integer</span></div>
+                        <div><span class="keyword">initiate</span> strNum = <span class="function">toString</span>(num) <span class="comment">// Convert to string</span></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="functions" class="docs-section">
+                <h2>Functions</h2>
+                <p>Functions in JhayScript are declared with the <code>function</code> keyword and can have typed parameters and return values.</p>
+                
+                <h3>Basic Function</h3>
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">functions.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="keyword">function</span> <span class="function">greet</span>(name: <span class="keyword">string</span>) -> <span class="keyword">string</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Hello, "</span> + name + <span class="string">"!"</span></div>
+                        <div>}</div>
+                        <br>
+                        <div><span class="keyword">initiate</span> message = <span class="function">greet</span>(<span class="string">"Samuel"</span>)</div>
+                        <div><span class="function">print</span>(message) <span class="comment">// Output: Hello, Samuel!</span></div>
+                    </div>
+                </div>
+                
+                <h3>Default Parameters</h3>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="keyword">function</span> <span class="function">createUser</span>(</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;name: <span class="keyword">string</span>,</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;isAdmin: <span class="keyword">bool</span> = <span class="keyword">false</span>,</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;permissions: [<span class="keyword">string</span>] = []</div>
+                        <div>) {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Function implementation</span></div>
+                        <div>}</div>
+                    </div>
+                </div>
+                
+                <h3>Higher-Order Functions</h3>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="keyword">function</span> <span class="function">applyOperation</span>(</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;numbers: [<span class="keyword">int</span>],</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;operation: <span class="keyword">function</span>(<span class="keyword">int</span>) -> <span class="keyword">int</span></div>
+                        <div>) -> [<span class="keyword">int</span>] {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> numbers.<span class="function">map</span>(operation)</div>
+                        <div>}</div>
+                        <br>
+                        <div><span class="keyword">initiate</span> squared = <span class="function">applyOperation</span>([1, 2, 3], (x) => x * x)</div>
+                        <div><span class="function">print</span>(squared) <span class="comment">// Output: [1, 4, 9]</span></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="control-flow" class="docs-section">
+                <h2>Control Flow</h2>
+                <p>JhayScript provides familiar control flow structures with clean syntax.</p>
+                
+                <h3>Conditionals</h3>
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">conditionals.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="keyword">initiate</span> age = <span class="number">21</span></div>
+                        <br>
+                        <div><span class="keyword">if</span> age >= <span class="number">18</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Adult"</span>)</div>
+                        <div>} <span class="keyword">else</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Minor"</span>)</div>
+                        <div>}</div>
+                        <br>
+                        <div><span class="comment">// Ternary operator</span></div>
+                        <div><span class="keyword">initiate</span> status = age >= <span class="number">18</span> ? <span class="string">"Adult"</span> : <span class="string">"Minor"</span></div>
+                    </div>
+                </div>
+                
+                <h3>Loops</h3>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="comment">// For loop</span></div>
+                        <div><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">5</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i)</div>
+                        <div>}</div>
+                        <br>
+                        <div><span class="comment">// While loop</span></div>
+                        <div><span class="keyword">initiate</span> count = <span class="number">0</span></div>
+                        <div><span class="keyword">while</span> count < <span class="number">5</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(count)</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;count += <span class="number">1</span></div>
+                        <div>}</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="collections" class="docs-section">
+                <h2>Collections</h2>
+                <p>JhayScript provides several collection types for managing groups of data.</p>
+                
+                <h3>Arrays</h3>
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">arrays.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="comment">// Array creation</span></div>
+                        <div><span class="keyword">initiate</span> numbers = [1, 2, 3, 4, 5]</div>
+                        <div><span class="keyword">initiate</span> names: [<span class="keyword">string</span>] = [<span class="string">"Alice"</span>, <span class="string">"Bob"</span>]</div>
+                        <br>
+                        <div><span class="comment">// Accessing elements</span></div>
+                        <div><span class="keyword">initiate</span> first = numbers[0] <span class="comment">// 1</span></div>
+                        <div><span class="keyword">initiate</span> last = numbers[-1] <span class="comment">// 5</span></div>
+                        <br>
+                        <div><span class="comment">// Array methods</span></div>
+                        <div>numbers.<span class="function">push</span>(6) <span class="comment">// Add to end</span></div>
+                        <div>numbers.<span class="function">pop</span>() <span class="comment">// Remove from end</span></div>
+                        <div>numbers.<span class="function">filter</span>((x) => x > <span class="number">3</span>) <span class="comment">// [4, 5]</span></div>
+                    </div>
+                </div>
+                
+                <h3>Maps (Dictionaries)</h3>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="comment">// Map creation</span></div>
+                        <div><span class="keyword">initiate</span> user = {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;name: <span class="string">"Samuel"</span>,</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;age: <span class="number">21</span>,</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;isAdmin: <span class="keyword">true</span></div>
+                        <div>}</div>
+                        <br>
+                        <div><span class="comment">// Accessing values</span></div>
+                        <div><span class="keyword">initiate</span> userName = user.name <span class="comment">// "Samuel"</span></div>
+                        <div><span class="keyword">initiate</span> userAge = user[<span class="string">"age"</span>] <span class="comment">// 21</span></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="advanced" class="docs-section">
+                <h2>Advanced Concepts</h2>
+                
+                <h3>Classes and OOP</h3>
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">classes.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="keyword">class</span> <span class="function">Person</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span> name: <span class="keyword">string</span></div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span> age: <span class="keyword">int</span></div>
+                        <br>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">constructor</span>(name: <span class="keyword">string</span>, age: <span class="keyword">int</span>) {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">self</span>.name = name</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">self</span>.age = age</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                        <br>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">method</span> <span class="function">greet</span>() -> <span class="keyword">string</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Hello, my name is "</span> + <span class="keyword">self</span>.name</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                        <div>}</div>
+                        <br>
+                        <div><span class="keyword">initiate</span> person = <span class="function">Person</span>(<span class="string">"Samuel"</span>, <span class="number">21</span>)</div>
+                        <div><span class="function">print</span>(person.<span class="function">greet</span>())</div>
+                    </div>
+                </div>
+                
+                <h3>Async/Await</h3>
+                <div class="code-example">
+                    <div class="code-content">
+                        <div><span class="keyword">async function</span> <span class="function">fetchData</span>(url: <span class="keyword">string</span>) -> <span class="keyword">Result</span>&lt;<span class="keyword">string</span>, <span class="keyword">string</span>&gt; {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span> {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span> response = <span class="keyword">await</span> <span class="function">http.get</span>(url)</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">Ok</span>(response.<span class="function">text</span>())</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;} <span class="keyword">catch</span> error {</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">Error</span>(<span class="string">"Failed to fetch data"</span>)</div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                        <div>}</div>
+                    </div>
+                </div>
+                
+                <h3>Built-in Functions</h3>
+                <div class="builtins-grid">
+                    <div class="builtin-card">
+                        <h4>print(value: any)</h4>
+                        <p>Outputs a value to the console.</p>
+                    </div>
+                    <div class="builtin-card">
+                        <h4>len(collection)</h4>
+                        <p>Returns the length of an array or string.</p>
+                    </div>
+                    <div class="builtin-card">
+                        <h4>range(start, end)</h4>
+                        <p>Generates a sequence of numbers.</p>
+                    </div>
+                    <div class="builtin-card">
+                        <h4>toInt(str), toFloat(str)</h4>
+                        <p>Converts strings to numbers.</p>
+                    </div>
+                    <div class="builtin-card">
+                        <h4>type(value)</h4>
+                        <p>Returns the type of a value.</p>
+                    </div>
+                    <div class="builtin-card">
+                        <h4>readFile(path)</h4>
+                        <p>Reads a file asynchronously.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/samueltagoe/jhayscript">GitHub</a>
+                <a href="mailto:samuel.tagoe@example.com">Contact</a>
+                <a href="#syntax">Documentation</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Samuel Tagoe. JhayScript is open source and built with ❤️ in Accra, Ghana.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/docs.js"></script>
+</body>
+</html>

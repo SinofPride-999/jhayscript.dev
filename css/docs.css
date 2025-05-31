@@ -1,0 +1,207 @@
+/* Documentation Layout */
+.docs-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 6rem auto 0;
+    padding: 0 2rem;
+}
+
+.docs-sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.docs-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.docs-sidebar ul {
+    list-style: none;
+}
+
+.docs-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.docs-sidebar a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.docs-sidebar a:hover {
+    color: var(--text-primary);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.docs-sidebar a.active {
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.2);
+    font-weight: 500;
+}
+
+.docs-content {
+    padding-bottom: 4rem;
+}
+
+.docs-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 120px;
+}
+
+.docs-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    background: none;
+    -webkit-text-fill-color: var(--text-primary);
+    text-align: left;
+}
+
+.docs-section h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--text-primary);
+}
+
+.docs-section p {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+}
+
+.docs-section code {
+    background: rgba(99, 102, 241, 0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+/* Installation Tabs */
+.installation-tabs {
+    margin: 2rem 0;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border: none;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Built-in Functions Grid */
+.builtins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.builtin-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.builtin-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.builtin-card h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.builtin-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .docs-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .docs-sidebar {
+        position: static;
+        height: auto;
+        margin-bottom: 2rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .docs-container {
+        padding: 0 1rem;
+    }
+    
+    .docs-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .docs-section h3 {
+        font-size: 1.25rem;
+    }
+}
