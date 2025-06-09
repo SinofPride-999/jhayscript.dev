@@ -49,10 +49,8 @@
                     <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello.jhay</span>
                 </div>
                 <div class="code-content">
-                    <div><span class="comment">// Your first JhayScript program</span></div>
-                    <div><span class="keyword">function</span> <span class="function">main</span>() {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Hello, World!"</span>)</div>
-                    <div>}</div>
+                    <div><span class="comment">:: Your first JhayScript program</span></div>
+                    <div><span class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</span> <span class="function">greet</span>() -> <span class="function">echo</span>(<span class="string">"Hello, World!"</span>);</div>
                 </div>
             </div>
         </div>
@@ -106,6 +104,8 @@
         <p>See how JhayScript makes complex concepts simple and readable.</p>
         
         <div class="code-showcase">
+            
+            <!-- DATA TYPES  -->
             <div class="code-block fade-in">
                 <div class="code-block-header">
                     <div class="code-header">
@@ -117,18 +117,19 @@
                     <span class="code-block-title">Variables & Types</span>
                 </div>
                 <div class="code-block-content">
-                    <div><span class="comment">// Strong typing with inference</span></div>
+                    <div><span class="comment">:: Strong typing with inference</span></div>
                     <div><span class="keyword">initiate</span> string_example = <span class="string">"Hello, Universe"</span></div>
                     <div><span class="keyword">initiate</span> int_example = <span class="number">11</span></div>
                     <div><span class="keyword">initiate</span> float_example = <span class="number">2.0</span></div>
                     <div><span class="keyword">initiate</span> list_example = [<span class="string">"Web Dev"</span>, <span class="string">"Systems"</span>]</div>
                     <br>
-                    <div><span class="comment">// Immutable by default</span></div>
+                    <div><span class="comment">:: Immutable by default</span></div>
                     <div><span class="keyword">initiate</span> PI = <span class="number">3.14159</span></div>
                     <div><span class="keyword">initiate</span> counter = <span class="number">0</span></div>
                 </div>
             </div>
-            
+
+            <!-- LOOPS  -->
             <div class="code-block fade-in">
                 <div class="code-block-header">
                     <div class="code-header">
@@ -140,19 +141,22 @@
                     <span class="code-block-title">Functions & Control Flow</span>
                 </div>
                 <div class="code-block-content">
-                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n: <span class="keyword">int</span>) -> <span class="keyword">int</span> {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n <= <span class="number">1</span> {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> n</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">fibonacci</span>(n-<span class="number">1</span>) + <span class="function">fibonacci</span>(n-<span class="number">2</span>)</div>
-                    <div>}</div>
+                    <div><span class="comment">:: One Liner function</span></div>
+                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n) -> <span class="keyword">bankai(</span>"Hello Universe"<span class="keyword">)</span> </div>
+                    
                     <br>
-                    <div><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">10</span> {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="function">fibonacci</span>(i))</div>
-                    <div>}</div>
+
+                    <div><span class="comment">:: Mulit Line function</span></div>
+                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n) <span class="keyword">THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n <= <span class="number">1</span> <span class="keyword">THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">release</span> n</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">END</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">release</span> <span class="function">fibonacci</span>(n-<span class="number">1</span>) + <span class="function">fibonacci</span>(n-<span class="number">2</span>)</div>
+                    <div><span class="keyword">END</span></div>
                 </div>
             </div>
             
+            <!-- FUNCTIONS  -->
             <div class="code-block fade-in">
                 <div class="code-block-header">
                     <div class="code-header">
@@ -161,49 +165,21 @@
                         <div class="dot"></div>
                         <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello_world.jhay</span>
                     </div>
-                    <span class="code-block-title">Object-Oriented Programming</span>
+                    <span class="code-block-title">Functions</span>
                 </div>
                 <div class="code-block-content">
-                    <div><span class="keyword">class</span> <span class="function">Developer</span> {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span> name: <span class="keyword">string</span></div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span> languages: [<span class="keyword">string</span>]</div>
+                    <div><span class="comment">:: One Liner function</span></div>
+                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n) -> <span class="keyword">bankai(</span>"Hello Universe"<span class="keyword">)</span> </div>
+                    
                     <br>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">constructor</span>(name: <span class="keyword">string</span>) {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">self</span>.name = name</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">self</span>.languages = []</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
-                    <br>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">method</span> <span class="function">learn</span>(lang: <span class="keyword">string</span>) {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">self</span>.languages.<span class="function">push</span>(lang)</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
-                    <div>}</div>
-                </div>
-            </div>
-            
-            <div class="code-block fade-in">
-                <div class="code-block-header">
-                    <div class="code-header">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello_world.jhay</span>
-                    </div>
-                    <span class="code-block-title">Error Handling & Async</span>
-                </div>
-                <div class="code-block-content">
-                    <div><span class="comment">// Safe error handling</span></div>
-                    <div><span class="keyword">function</span> <span class="function">divide</span>(a, b) -> <span class="keyword">Result</span>&lt;<span class="keyword">float</span>, <span class="keyword">string</span>&gt; {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> b == <span class="number">0</span> {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">Error</span>(<span class="string">"Division by zero"</span>)</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">Ok</span>(a / b)</div>
-                    <div>}</div>
-                    <br>
-                    <div><span class="comment">// Async/await support</span></div>
-                    <div><span class="keyword">async function</span> <span class="function">fetchData</span>() {</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span> response = <span class="keyword">await</span> <span class="function">http.get</span>(<span class="string">"/api/data"</span>)</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> response.<span class="function">json</span>()</div>
-                    <div>}</div>
+
+                    <div><span class="comment">:: Mulit Line function</span></div>
+                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n) <span class="keyword">THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n <= <span class="number">1</span> <span class="keyword">THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">release</span> n</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">END</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">release</span> <span class="function">fibonacci</span>(n-<span class="number">1</span>) + <span class="function">fibonacci</span>(n-<span class="number">2</span>)</div>
+                    <div><span class="keyword">END</span></div>
                 </div>
             </div>
         </div>
