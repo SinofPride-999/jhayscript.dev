@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhayScript - Download</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- <link rel="stylesheet" href="/css/docs.css"> -->
+    <link rel="stylesheet" href="/css/download.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSIxMiIgZmlsbD0iIzFFMjkzQiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIiBkeT0iLjM1ZW0iIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGQUNDMTUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkpTPC90ZXh0Pjwvc3ZnPg==" alt="JhayScript Logo" width="48" height="48">
+                <span>JhayScript</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/views/docs.html">Documentation</a></li>
+                <li><a href="/download/jhayscript.exe" class="active">Download</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://github.com/SinofPride-999" target="_blank" class="nav-btn nav-btn-secondary">GitHub</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="docs-container">
+        <div class="docs-content">
+            <section id="download" class="docs-section">
+                <h2>Download JhayScript</h2>
+                <p>Get the latest version of JhayScript for your operating system.</p>
+                
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span class="code-title">Latest Version: 1.0.0</span>
+                    </div>
+                    <div class="code-content">
+                        <div class="installation-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="windows-tab">Windows</button>
+                                <button class="tab-btn" data-tab="macos-tab">macOS</button>
+                                <button class="tab-btn" data-tab="linux-tab">Linux</button>
+                            </div>
+                            
+                            <div id="windows-tab" class="tab-content active">
+                                <div>
+                                    <h3>Windows Installation</h3>
+                                    <p>Download the Windows installer:</p>
+                                    <a href="/download/jhayscript.exe" class="btn btn-primary" style="display: inline-block; margin-bottom: 1rem;">
+                                        Download for Windows (64-bit)
+                                    </a>
+                                    
+                                    <h4>Adding to PATH</h4>
+                                    <p>After installation, add JhayScript to your system PATH:</p>
+                                    <ol>
+                                        <li>Right-click on "This PC" and select "Properties"</li>
+                                        <li>Click on "Advanced system settings"</li>
+                                        <li>Click on "Environment Variables"</li>
+                                        <li>Under "System variables", find and select the "Path" variable</li>
+                                        <li>Click "Edit", then "New"</li>
+                                        <li>Add the path where JhayScript is installed (eg <code>C:\Program Files\JhayScript</code>)</li>
+                                        <li>Click "OK" to save all changes</li>
+                                    </ol>
+                                    
+                                    <h4>Verify Installation</h4>
+                                    <p>Open Command Prompt and run:</p>
+                                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                        <code>jhayscript --version</code>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="macos-tab" class="tab-content">
+                                <div>
+                                    <h3>macOS Installation</h3>
+                                    <p>Download the macOS package:</p>
+                                    <a href="/download/jhayscript.exe" class="btn btn-primary" style="display: inline-block; margin-bottom: 1rem;">
+                                        Download for macOS
+                                    </a>
+                                    
+                                    <!-- <h4>Alternative: Homebrew</h4>
+                                    <p>You can also install using Homebrew:</p>
+                                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                        <code>brew tap samueltagoe/jhayscript</code><br>
+                                        <code>brew install jhayscript</code>
+                                    </div> -->
+                                    
+                                    <h4>Adding to PATH</h4>
+                                    <p>Add to your shell configuration:</p>
+                                    <ol>
+                                        <li>Open Terminal</li>
+                                        <li>Edit your shell config file (<code>~/.zshrc</code> or <code>~/.bash_profile</code>)</li>
+                                        <li>Add: <code>export PATH="/usr/local/jhayscript/bin:$PATH"</code></li>
+                                        <li>Run: <code>source ~/.zshrc</code> (or your config file)</li>
+                                    </ol>
+                                    
+                                    <h4>Verify Installation</h4>
+                                    <p>Run in Terminal:</p>
+                                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                        <code>jhayscript --version</code>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="linux-tab" class="tab-content">
+                                <div>
+                                    <h3>Linux Installation</h3>
+                                    <p>Download the Linux binary:</p>
+                                    <a href="/download/jhayscript.exe" class="btn btn-primary" style="display: inline-block; margin-bottom: 1rem;">
+                                        Download for Linux (64-bit)
+                                    </a>
+                                    
+                                    <h4>Installation Steps</h4>
+                                    <ol>
+                                        <li>Extract the downloaded archive: <code>tar -xzf jhayscript-linux-1.0.0.tar.gz</code></li>
+                                        <li>Move the binary to a system directory: <code>sudo mv jhayscript /usr/local/bin/</code></li>
+                                    </ol>
+                                    
+                                    <!-- <h4>Alternative: Package Managers</h4>
+                                    <p>For Debian/Ubuntu:</p>
+                                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                        <code>sudo apt-get install ./jhayscript_1.0.0_amd64.deb</code>
+                                    </div>
+                                    
+                                    <p>For Arch Linux (AUR):</p>
+                                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                        <code>yay -S jhayscript</code>
+                                    </div> -->
+                                    
+                                    <h4>Verify Installation</h4>
+                                    <p>Run in Terminal:</p>
+                                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                        <code>jhayscript --version</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Getting Started</h3>
+                <p>After installation, create a simple JhayScript file (<code>hello.jhay</code>) with:</p>
+                
+                <div class="code-example">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span class="code-title">hello.jhay</span>
+                    </div>
+                    <div class="code-content">
+                        <div><span class="comment">:: Hello World in JhayScript</span></div>
+                        <div><span class="function">echo</span>(<span class="string">"Hello, World!"</span>)</div>
+                    </div>
+                </div>
+                <br>
+                <p>Run it with:</p>
+                <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <code>jhayscript hello.jhay</code>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/SinofPride-999" target="_blank">GitHub</a>
+                <a href="mailto:jhaycodes999@gmail.com" target="_blank">Contact</a>
+                <a href="/views/docs.html">Documentation</a>
+                <a href="/views/dev.html">About</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; JhayScript is built with &#x1F5A4; in Accra, Ghana.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/js/script.js"></script>
+    <script>
+        // Tab functionality for installation instructions
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

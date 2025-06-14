@@ -12,7 +12,8 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzIxNTczMiIgZD0iTTEyIDBDNS4zNzMgMCAwIDUuMzczIDAgMTJzNS4zNzMgMTIgMTIgMTIgMTItNS4zNzMgMTItMTJTMTguNjI3IDAgMTIgMHptMCAyMi4wMjdjLTUuNTIxIDAtMTAtNC40NzktMTAtMTAgMC01LjUyMSA0LjQ3OS0xMCAxMC0xMCA1LjUyMSAwIDEwIDQuNDc5IDEwIDEwIDAgNS41MjEtNC40NzkgMTAtMTAgMTB6Ii8+PHBhdGggZmlsbD0iIzIxNTczMiIgZD0iTTExLjk5OSAxNy41Yy0zLjAzOCAwLTUuNS0yLjQ2Mi01LjUtNS41czIuNDYyLTUuNSA1LjUtNS41IDUuNSAyLjQ2MiA1LjUgNS41LTIuNDYyIDUuNS01LjUgNS41em0wLTkuMDAyYy0xLjg5MiAwLTMuNSAxLjYwOC0zLjUgMy41czEuNjA4IDMuNSAzLjUgMy41IDMuNS0xLjYwOCAzLjUtMy41LTEuNjA4LTMuNS0zLjUtMy41eiIvPjwvc3ZnPg==" alt="JhayScript Logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSIxMiIgZmlsbD0iIzFFMjkzQiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIiBkeT0iLjM1ZW0iIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGQUNDMTUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkpTPC90ZXh0Pjwvc3ZnPg==" alt="JhayScript Logo" width="48" height="48">
+                <span>JhayScript</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
@@ -21,7 +22,7 @@
                 <li><a href="/views/dev.html">Developer</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#download" class="nav-btn nav-btn-primary">Download</a>
+                <a href="/views/download.html" class="nav-btn nav-btn-primary">Download</a>
                 <a href="/views/docs.html" class="nav-btn nav-btn-secondary">Docs</a>
             </div>
         </div>
@@ -36,65 +37,56 @@
                 <a href="#syntax" class="btn btn-primary">
                     <span>Syntax Snippet</span>
                 </a>
-                <a href="#about" class="btn btn-secondary">
+                <a href="/views/dev.html" class="btn btn-secondary">
                     <span>Meet the Creator</span>
                 </a>
-            </div>
-            
-            <div class="code-example">
-                <div class="code-header">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello.jhay</span>
-                </div>
-                <div class="code-content">
-                    <div><span class="comment">:: Your first JhayScript program</span></div>
-                    <div><span class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</span> <span class="function">greet</span>() -> <span class="function">echo</span>(<span class="string">"Hello, World!"</span>);</div>
-                </div>
             </div>
         </div>
     </section>
     
     <section id="features" class="section">
         <h2>Why Choose JhayScript?</h2>
-        <p>Built from the ground up to combine the simplicity of BASIC with modern programming paradigms.</p>
+        <p>A modern, expressive scripting language with Python-like syntax and powerful error handling features.</p>
         
         <div class="features-grid">
             <div class="feature-card fade-in">
-                <div class="feature-icon">🚀</div>
-                <h3>Modern Syntax</h3>
-                <p>Clean, readable code inspired by Python's elegance and Rust's safety. Every line tells a clear story.</p>
+                <h3 style="color: #4f46e5;">Python-Inspired Syntax</h3>
+                <p>Clean, readable code with familiar constructs like <code>if</code>, <code>for</code>, and <code>while</code> loops, plus Python-style lists and strings.</p>
             </div>
             
             <div class="feature-card fade-in">
-                <div class="feature-icon">⚡</div>
-                <h3>High Performance</h3>
-                <p>Optimized compilation inspired by C++ efficiency, delivering speed without sacrificing readability.</p>
+                <h3 style="color: #4f46e5;">Expressive Error Handling</h3>
+                <p>Unique <code>fuck_around</code> and <code>find_out</code> blocks for intuitive try-catch error handling with detailed error messages.</p>
             </div>
             
             <div class="feature-card fade-in">
-                <div class="feature-icon">🛡️</div>
-                <h3>Memory Safety</h3>
-                <p>Built-in memory management and type safety features prevent common programming errors.</p>
+                <h3 style="color: #4f46e5;">Immediate Feedback</h3>
+                <p>Detailed error messages with line numbers and arrows pointing to exactly where problems occur.</p>
             </div>
             
             <div class="feature-card fade-in">
-                <div class="feature-icon">🎯</div>
-                <h3>Developer Friendly</h3>
-                <p>Intuitive syntax that's easy to learn for beginners yet powerful enough for complex applications.</p>
+                <h3 style="color: #4f46e5;">Rich Built-in Functions</h3>
+                <p>Over 50+ and still growing built-in functions for lists, strings, math operations, and more - including <code>merge</code>, <code>shuffle</code>, and <code>is_prime</code>.</p>
             </div>
             
             <div class="feature-card fade-in">
-                <div class="feature-icon">🔧</div>
-                <h3>Versatile</h3>
-                <p>Perfect for web development, systems programming, and everything in between.</p>
+                <h3 style="color: #4f46e5;">Dynamic Typing</h3>
+                <p>Flexible variable system with automatic type handling for numbers, strings, lists, and functions.</p>
             </div>
             
             <div class="feature-card fade-in">
-                <div class="feature-icon">📚</div>
-                <h3>BASIC Heritage</h3>
-                <p>Maintains the approachable nature of BASIC while embracing modern programming concepts.</p>
+                <h3 style="color: #4f46e5;">Immediate Feedback</h3>
+                <p>Detailed error messages with line numbers and arrows pointing to exactly where problems occur.</p>
+            </div>
+
+            <!-- <div class="feature-card fade-in">
+                <h3 style="color: #4f46e5;">Module System</h3>
+                <p>Import functionality with <code>import</code> and <code>from</code> statements for code organization.</p>
+            </div> -->
+
+            <div class="feature-card fade-in">
+                <h3 style="color: #4f46e5;">Timing Control</h3>
+                <p>Built-in <code>sleep</code> function for delaying execution when needed.</p>
             </div>
         </div>
     </section>
@@ -124,8 +116,8 @@
                     <div><span class="keyword">initiate</span> list_example = [<span class="string">"Web Dev"</span>, <span class="string">"Systems"</span>]</div>
                     <br>
                     <div><span class="comment">:: Immutable by default</span></div>
-                    <div><span class="keyword">initiate</span> PI = <span class="number">3.14159</span></div>
-                    <div><span class="keyword">initiate</span> counter = <span class="number">0</span></div>
+                    <div><span class="keyword">PI = <span class="number">3.14159</span></div>
+                    <div><span class="keyword">counter = <span class="number">0</span></div>
                 </div>
             </div>
 
@@ -138,23 +130,47 @@
                         <div class="dot"></div>
                         <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello_world.jhay</span>
                     </div>
-                    <span class="code-block-title">Functions & Control Flow</span>
+                    <span class="code-block-title">Loops</span>
                 </div>
                 <div class="code-block-content">
-                    <div><span class="comment">:: One Liner function</span></div>
-                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n) -> <span class="keyword">bankai(</span>"Hello Universe"<span class="keyword">)</span> </div>
-                    
+                    <div><span class="comment">:: Repeat 5 times</span></div>
+                    <div><span class="keyword">for</span> i = <span class="number">0</span> to <span class="number">5</span> <span class="keyword">THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">echo</span>(i)</div>
+                    <div><span class="keyword">END</span></div>
+
                     <br>
 
-                    <div><span class="comment">:: Mulit Line function</span></div>
-                    <div><span class="keyword">function</span> <span class="function">fibonacci</span>(n) <span class="keyword">THEN</span></div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n <= <span class="number">1</span> <span class="keyword">THEN</span></div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">release</span> n</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">END</span></div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">release</span> <span class="function">fibonacci</span>(n-<span class="number">1</span>) + <span class="function">fibonacci</span>(n-<span class="number">2</span>)</div>
+                    <div><span class="comment">:: Loop through array</span></div>
+                    <div><span class="keyword">initiate</span> names = ["Jhay", "Kea", "Rich"]</div>
+                    <div><span class="keyword">for</span> name <span class="keyword">in</span> names <span class="keyword">THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">echo</span>("Hi " + name)</div>
                     <div><span class="keyword">END</span></div>
                 </div>
             </div>
+
+            <!-- ERROR HANDLING -->
+            <div class="code-block fade-in">
+                <div class="code-block-header">
+                    <div class="code-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <span style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);">hello_world.jhay</span>
+                    </div>
+                    <span class="code-block-title">Error Handling</span>
+                </div>
+                <div class="code-block-content">
+                    <div><span class="comment">:: Try / Catch block</span></div>
+                    <br>
+                    <div><span class="keyword">fuck_around</span> <span class="keyword"> THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">echo</span>(10 / 0)</div>
+                    <div><span class="comment">:: Division by zero should raise an error</span></div>
+                    <div><span class="keyword">find_out</span>(err)<span class="keyword"> THEN</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">echo</span>("Caught an error: " + err)</div>
+                    <div><span class="keyword">END</span></div>
+                </div>
+            </div>
+
             
             <!-- FUNCTIONS  -->
             <div class="code-block fade-in">
@@ -188,13 +204,13 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="https://github.com/samueltagoe/jhayscript">GitHub</a>
-                <a href="mailto:samuel.tagoe@example.com">Contact</a>
-                <a href="#syntax">Documentation</a>
-                <a href="#about">About</a>
+                <a href="https://github.com/SinofPride-999" target="_blank">GitHub</a>
+                <a href="mailto:jhaycodes999@gmail.com" target="_blank">Contact</a>
+                <a href="/views/docs.html">Documentation</a>
+                <a href="/views/dev.html">About</a>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Samuel Tagoe. JhayScript is open source and built with ❤️ in Accra, Ghana.</p>
+                <p>&copy; JhayScript is built with &#x1F5A4; in Accra, Ghana.</p>
             </div>
         </div>
     </footer>

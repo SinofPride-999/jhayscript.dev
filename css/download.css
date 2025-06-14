@@ -1,0 +1,196 @@
+/* Download Page Specific Styles */
+.download-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.download-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.download-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+}
+
+.download-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.download-card .btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.install-steps {
+    margin: 2rem 0;
+}
+
+.install-steps h4 {
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.install-steps ol, .install-steps ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.install-steps li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.verify-install {
+    background: var(--bg-tertiary);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* Tab Styles */
+.tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 6px 6px 0 0;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.2);
+    position: relative;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .download-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* Button Styles */
+.btn {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--gradient-1);
+    color: white;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Code Blocks */
+code {
+    background: rgba(99, 102, 241, 0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+}
