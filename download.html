@@ -28,13 +28,11 @@
         </div>
     </nav>
     
-    <main class="docs-container">
+    <main class="docs-container" style="margin-left: 30px; margin-right: 30px;">
         <div class="docs-content">
             <section id="download" class="docs-section">
-                <h2 class="remove-on-mobile">Download JhayScript</h2>
-                <p class="remove-on-mobile">Get the latest version of JhayScript for your operating system.</p>
                 
-                <div class="code-example">
+                <div class="code-example" style="margin-top: 100px;">
                     <div class="code-header">
                         <div class="dot"></div>
                         <div class="dot"></div>
@@ -42,7 +40,7 @@
                         <span class="code-title">Latest Version: 1.0.0</span>
                     </div>
                     <div class="code-content">
-                        <div class="installation-tabs">
+                        <div class="installation-tabs" style="margin-left: 10px;">
                             <div class="tab-buttons">
                                 <button class="tab-btn active" data-tab="windows-tab">Windows</button>
                                 <button class="tab-btn" data-tab="macos-tab">macOS</button>
@@ -53,8 +51,8 @@
                                 <div>
                                     <h3>Windows Installation</h3>
                                     <p>Download the Windows installer:</p>
-                                    <a href="jhayscript.exe" class="btn btn-primary" style="display: inline-block; margin-bottom: 1rem;">
-                                        Download for Windows (64-bit)
+                                    <a href="jhayscript.exe" class="btn btn-primary " style="display: inline-block; margin-bottom: 1rem;">
+                                        Download for Windows
                                     </a>
                                     
                                     <h4>Adding to PATH</h4>
@@ -114,7 +112,7 @@
                                     <h3>Linux Installation</h3>
                                     <p>Download the Linux binary:</p>
                                     <a href="jhayscript.exe" class="btn btn-primary" style="display: inline-block; margin-bottom: 1rem;">
-                                        Download for Linux (64-bit)
+                                        Download for Linux
                                     </a>
                                     
                                     <h4>Installation Steps</h4>
@@ -145,7 +143,7 @@
                     </div>
                 </div>
                 
-                <h3>Getting Started</h3>
+                <h3  style="margin-top: 30px;">Getting Started</h3>
                 <p>After installation, create a simple JhayScript file (<code>hello.jhay</code>) with:</p>
                 
                 <div class="code-example">
@@ -177,6 +175,7 @@
                 <a href="docs.html">Documentation</a>
                 <a href="index.html">Home</a>
                 <a href="dev.html">About</a>
+                <a href="#download">Top</a>
             </div>
             <div class="copyright">
                 <p>&copy; JhayScript is built with &#x1F5A4; in Accra, Ghana.</p>
@@ -186,6 +185,16 @@
     
     <script src="script.js"></script>
     <script>
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
         // Tab functionality for installation instructions
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -200,6 +209,26 @@
                 document.getElementById(tabId).classList.add('active');
             });
         });
+
+        // Check for platform parameter on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const platform = getUrlParameter('platform');
+            if (platform) {
+                // Remove active class from all buttons and content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Activate the corresponding tab
+                const tabId = platform + '-tab';
+                const tabButton = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+                
+                if (tabButton && document.getElementById(tabId)) {
+                    tabButton.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                }
+            }
+        });
     </script>
+
 </body>
 </html>

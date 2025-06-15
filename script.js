@@ -140,28 +140,28 @@ window.addEventListener('scroll', () => {
 });
 
 // Mobile menu toggle (for future enhancement)
-const createMobileMenu = () => {
-    const navContainer = document.querySelector('.nav-container');
-    const navLinks = document.querySelector('.nav-links');
+// const createMobileMenu = () => {
+//     const navContainer = document.querySelector('.nav-container');
+//     const navLinks = document.querySelector('.nav-links');
     
-    if (window.innerWidth <= 768) {
-        const menuButton = document.createElement('button');
-        menuButton.innerHTML = '☰';
-        menuButton.style.cssText = `
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: block;
-        `;
+//     if (window.innerWidth <= 768) {
+//         const menuButton = document.createElement('button');
+//         menuButton.innerHTML = '☰';
+//         menuButton.style.cssText = `
+//             background: none;
+//             border: none;
+//             color: var(--text-primary);
+//             font-size: 1.5rem;
+//             cursor: pointer;
+//             display: block;
+//         `;
         
-        if (!document.querySelector('.mobile-menu-btn')) {
-            menuButton.classList.add('mobile-menu-btn');
-            navContainer.appendChild(menuButton);
-        }
-    }
-};
+//         if (!document.querySelector('.mobile-menu-btn')) {
+//             menuButton.classList.add('mobile-menu-btn');
+//             navContainer.appendChild(menuButton);
+//         }
+//     }
+// };
 
 window.addEventListener('resize', createMobileMenu);
 createMobileMenu();
