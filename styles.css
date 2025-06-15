@@ -208,7 +208,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    min-height: 110vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,6 +238,16 @@ nav {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
+}
+
+.hero-version {
+    background: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--bg-primary);
 }
 
 .cta-buttons {
