@@ -277,7 +277,7 @@
                         <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">:: Code that might fail</span></div>
                         <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">initiate</span> result = <span class="number">10</span> / <span class="number">0</span></div>
                         <div><span class="keyword">find_out</span> (error) THEN</div>
-                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">echo</span>(<span class="string">"Caught an error: "</span>, error) <span class="comment">:: Detailed Error Message</span></div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">echo</span>(<span class="string">"Caught an error: "</span> + error) <span class="comment">:: Detailed Error Message</span></div>
                         <div>END</div>
                     </div>
                 </div>
@@ -348,8 +348,8 @@
                         <div><span class="keyword">initiate</span> last = fruits[-<span class="number">1</span>] <span class="comment">:: "cherry"</span></div>
                         <br>
                         <div><span class="comment">:: List operations</span></div>
-                        <div>fruits.<span class="function">append</span>(<span class="string">"orange"</span>)</div>
-                        <div>fruits.<span class="function">remove</span>(<span class="number">1</span>)  <span class="comment">:: Remove at index 1</span></div>
+                        <div><span class="function">append</span>(fruits, <span class="string">"orange"</span>)</div>
+                        <div><span class="function">remove</span>(fruits, <span class="number">1</span>)  <span class="comment">:: Remove at index 1</span></div>
                         <div><span class="keyword">initiate</span> length = <span class="function">len</span>(fruits)</div>
                     </div>
                 </div>
